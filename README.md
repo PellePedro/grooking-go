@@ -10,7 +10,7 @@
 [Go By Example](https://gobyexample.com)
 
 ## Learning Go
-[](https://miek.nl/go/)
+[Miek Gieben Learning Go](https://miek.nl/go/)
 
 ## Awesome GO
 [Avesome Go](https://awesome-go.com)
