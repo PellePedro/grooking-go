@@ -1,0 +1,19 @@
+version: "3.8"  # optional since v1.27.0
+services:
+  App:
+    image: sample-app
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        - program=cmd/app/main.go
+        - build=001
+  GRPC:
+    image: grpc-server
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        - program=cmd/grpc/server/*.go
+        - build=001
+        - version=0.1.1
