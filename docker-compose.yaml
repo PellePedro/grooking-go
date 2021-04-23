@@ -8,12 +8,21 @@ services:
       args:
         - program=cmd/app/main.go
         - build=001
-  GRPC:
+  GRPCS:
     image: grpc-server
     build:
       dockerfile: Dockerfile
       context: .
       args:
         - program=cmd/grpc/server/*.go
+        - build=001
+        - version=0.1.1
+  GRPCC:
+    image: grpc-client
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        - program=cmd/grpc/client/*.go
         - build=001
         - version=0.1.1
